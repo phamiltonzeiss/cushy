@@ -82,3 +82,20 @@ Beyond that, there are requisite ongoing costs associated with this paradigm. A 
 
 #### Other Tech
 Regardless of environment choice, we'd also most likely want Nginx or Apache web servers; MySQL or similar database; Python, Ruby, or Go for backend dev; JavaScript/CSS for front end; Jenkins for pipelines; Nagios for monitoring. This stuff is all open source and unlikely to represent any significant cost, up front or ongoing.
+
+Beyond that, further investigation is required. I'm not sure what Zeiss's procurement policies are like, but possible features like live agent chat, document conversion, ticketing automation, payment processing, etc could all potentially be acquired rather than rolling our own. SmartSupp, LiveChat, ZenDesk, Obsidian, SAP Gateway, Paysafe, Stax, Servicenow, Servicate, etc could be analyzed for potential integration as opposed to developing every feature/component in-house.
+
+## Miscellaneous Considerations
+To me, the main questions before diving in with any engineering would be:
+
+ - Will we have buy-in/support from Germany to implement this in a way that is actually useful?
+ - Will we have local resources available to drive the project all the way to completion and then keep it maintained?
+
+My view is that this isn't the kind of thing that can be completely slow-rolled (like SNAP) because partial implementation/deployment still carries some value. If we develop a UEI and dump a few docs into a database and push it onto a Raspberry Pi and start telling our customers about it, it will only take one instance of any given customer checking the site and not finding what they're looking for before they abandon it and revert their default back to the support phone.
+
+Likewise, unless the processes around something like this are well-thought-out and clearly established, it's likely doomed to be a dead end. Publishing documentation that seems safe for customers only to find out someone doesn't think it should be customer-facing or disagrees on some specific verbiage will undermine the efforts to populate the site with useful, relevant information. Building an API to communicate with SAP only to hit a brick wall getting it integrated with the CRM maintainers would be immensely frustrating.
+
+It's also worth mentioning somewhere that there may be a broader application for (at least) the documentation component here as well. Above, when mentioning the knowlege base, I listed half a dozen systems/repositories where some of the documented knowledge is kept. But that's hardly an exhaustive list: there's also people's personal notes, tons of files stored on the N: drive, training material, and probably a bunch I'm forgetting or don't know about. I feel there's a strong case to be made for consolidating as many of those tools as possible and using a subset of all the available reference documentation for customer self-service. I'd argue CZMI Tech Support should have a documenation wrangler as a dedicated, full-time role. In any case, any effort to formalize and clarify documentation for customers could also have significant benefits for internal documentation as well.
+
+## Conclusion
+A tool like CuSHY has the potential to improve customer satisfaction by a significant margin. Reducing the number of incoming calls (especially those that are relatively easy to resolve or which are not Tech Support-specific) will reduce queue/hold times, providing alternate support interaction methods benefits customers with hearing difficulties or who need less synchronous communication, and taking control of customer-facing support-specific functionality gives us the power to shape our workflows to best meet our customers' needs. There are significant challenges inherent in a project like this, but I think with sufficient preparation and foresight, they can be mitigated enough to make the end result a success.
